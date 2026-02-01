@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amit Sharma | Video Editor Portfolio</title>
 
-  <!-- Embedded CSS -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    /* Neon gradient animated background */
+    body {
+      background: linear-gradient(-45deg, #ff00ff, #00ffff, #ff0080, #00ff80);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      color: #e5e7eb;
+      line-height: 1.6;
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    body {
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header h1, h2 {
+      text-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8, 0 0 30px #38bdf8;
     }
 
     header {
@@ -25,146 +31,48 @@
       padding: 80px 20px;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      color: #38bdf8;
-    }
+    header h1 { font-size: 2.5rem; color: #38bdf8; }
+    header p { margin-top: 10px; font-size: 1.1rem; color: #cbd5f5; }
 
-    header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      color: #cbd5f5;
-    }
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
 
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+    h2 { text-align: center; margin-bottom: 40px; color: #38bdf8; font-size: 2rem; }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #38bdf8;
-      font-size: 2rem;
-    }
+    .about { text-align: center; max-width: 700px; margin: auto; font-size: 1rem; }
 
-    .about {
-      text-align: center;
-      max-width: 700px;
-      margin: auto;
-      font-size: 1rem;
-    }
+    .main-video { display: flex; flex-direction: column; align-items: center; margin-bottom: 50px; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 12px; }
+    .main-video iframe { width: 80%; max-width: 900px; height: 500px; border-radius: 12px; }
+    .open-link { margin-top: 10px; text-decoration: none; color: #38bdf8; font-weight: bold; }
+    .open-link:hover { text-decoration: underline; }
 
-    /* Main intro video styling */
-    .main-video {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 50px;
-    }
+    .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .video-box { background: rgba(0,0,0,0.7); padding: 10px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); display: flex; flex-direction: column; align-items: center; }
+    .video-box iframe { width: 100%; height: 200px; border-radius: 10px; }
 
-    .main-video iframe {
-      width: 80%;
-      max-width: 900px;
-      height: 500px;
-      border-radius: 12px;
-    }
+    .contact { text-align: center; }
+    .btn { display: inline-block; margin-top: 20px; padding: 14px 30px; background: #22c55e; color: #022c22; font-weight: bold; border-radius: 50px; text-decoration: none; transition: 0.3s; }
+    .btn:hover { transform: scale(1.05); }
 
-    .open-link {
-      margin-top: 10px;
-      text-decoration: none;
-      color: #38bdf8;
-      font-weight: bold;
-    }
-
-    .open-link:hover {
-      text-decoration: underline;
-    }
-
-    /* Other videos grid */
-    .videos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .video-box {
-      background: #020617;
-      padding: 10px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .video-box iframe {
-      width: 100%;
-      height: 200px;
-      border-radius: 10px;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 30px;
-      background: #22c55e;
-      color: #022c22;
-      font-weight: bold;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #94a3b8;
-    }
+    footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #94a3b8; }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      .main-video iframe {
-        width: 100%;
-        height: 300px;
-      }
-      .video-box iframe {
-        height: 180px;
-      }
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+      .main-video iframe { width: 100%; height: 300px; }
+      .video-box iframe { height: 180px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
   <header>
     <h1>Amit Sharma</h1>
     <p>Professional Video Editor | Reels • YouTube • Ads</p>
   </header>
 
-  <!-- ABOUT SECTION -->
   <section>
     <h2>About Me</h2>
-    <p class="about">
-      I am a creative video editor specializing in YouTube videos, Instagram reels,
-      short-form content, and promotional ads. I focus on clean edits, engaging storytelling,
-      and fast delivery.
-    </p>
+    <p class="about">I am a creative video editor specializing in YouTube videos, Instagram reels, short-form content, and promotional ads. I focus on clean edits, engaging storytelling, and fast delivery.</p>
   </section>
 
   <!-- MAIN INTRO VIDEO -->
@@ -173,35 +81,29 @@
     <a class="open-link" href="https://www.youtube.com/watch?v=u6KTFBKMP8M" target="_blank">Open in YouTube App</a>
   </section>
 
-  <!-- OTHER VIDEOS GRID -->
   <section>
     <h2>Other Videos</h2>
     <div class="videos">
-      <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/Ltg3C8xi18Q?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe>
-        <a class="open-link" href="https://www.youtube.com/watch?v=Ltg3C8xi18Q" target="_blank">Open in YouTube App</a>
-      </div>
-      <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/AADH9MAhInM?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe>
-        <a class="open-link" href="https://www.youtube.com/watch?v=AADH9MAhInM" target="_blank">Open in YouTube App</a>
-      </div>
-      <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/l1DFX4P94vs?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe>
-        <a class="open-link" href="https://www.youtube.com/watch?v=l1DFX4P94vs" target="_blank">Open in YouTube App</a>
-      </div>
-      <!-- Repeat for all other videos -->
+      <div class="video-box"><iframe src="https://www.youtube.com/embed/Ltg3C8xi18Q?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe><a class="open-link" href="https://www.youtube.com/watch?v=Ltg3C8xi18Q" target="_blank">Open in YouTube App</a></div>
+      <div class="video-box"><iframe src="https://www.youtube.com/embed/AADH9MAhInM?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe><a class="open-link" href="https://www.youtube.com/watch?v=AADH9MAhInM" target="_blank">Open in YouTube App</a></div>
+      <div class="video-box"><iframe src="https://www.youtube.com/embed/l1DFX4P94vs?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe><a class="open-link" href="https://www.youtube.com/watch?v=l1DFX4P94vs" target="_blank">Open in YouTube App</a></div>
+      <div class="video-box"><iframe src="https://www.youtube.com/embed/F2Pgi8cdoM4?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe><a class="open-link" href="https://www.youtube.com/watch?v=F2Pgi8cdoM4" target="_blank">Open in YouTube App</a></div>
+      <div class="video-box"><iframe src="https://www.youtube.com/embed/QR9MCXn9niU?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe><a class="open-link" href="https://www.youtube.com/watch?v=QR9MCXn9niU" target="_blank">Open in YouTube App</a></div>
+      <div class="video-box"><iframe src="https://www.youtube.com/embed/O22p_MHiX80?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe><a class="open-link" href="https://www.youtube.com/watch?v=O22p_MHiX80" target="_blank">Open in YouTube App</a></div>
+      <div class="video-box"><iframe src="https://www.youtube.com/embed/DdLp_KjFwDo?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe><a class="open-link" href="https://www.youtube.com/watch?v=DdLp_KjFwDo" target="_blank">Open in YouTube App</a></div>
+      <div class="video-box"><iframe src="https://www.youtube.com/embed/EVHpZFzsiLs?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe><a class="open-link" href="https://www.youtube.com/watch?v=EVHpZFzsiLs" target="_blank">Open in YouTube App</a></div>
+      <div class="video-box"><iframe src="https://www.youtube.com/embed/E_Vk2xv3rMI?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe><a class="open-link" href="https://www.youtube.com/watch?v=E_Vk2xv3rMI" target="_blank">Open in YouTube App</a></div>
+      <div class="video-box"><iframe src="https://www.youtube.com/embed/v-iaMzEHWgg?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe><a class="open-link" href="https://www.youtube.com/watch?v=v-iaMzEHWgg" target="_blank">Open in YouTube App</a></div>
+      <!-- Continue adding remaining videos in the same pattern up to all 40 -->
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
   <section class="contact">
     <h2>Contact Me</h2>
     <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Chat on WhatsApp</a>
   </section>
 
-  <footer>
-    © 2026 Amit Sharma • All Rights Reserved
-  </footer>
+  <footer>© 2026 Amit Sharma • All Rights Reserved</footer>
 
 </body>
 </html>
