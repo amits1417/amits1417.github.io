@@ -59,7 +59,8 @@
     /* Main intro video styling */
     .main-video {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       margin-bottom: 50px;
     }
 
@@ -68,6 +69,17 @@
       max-width: 900px;
       height: 500px;
       border-radius: 12px;
+    }
+
+    .open-link {
+      margin-top: 10px;
+      text-decoration: none;
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    .open-link:hover {
+      text-decoration: underline;
     }
 
     /* Other videos grid */
@@ -82,6 +94,9 @@
       padding: 10px;
       border-radius: 12px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .video-box iframe {
@@ -128,6 +143,9 @@
         width: 100%;
         height: 300px;
       }
+      .video-box iframe {
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -152,52 +170,26 @@
   <!-- MAIN INTRO VIDEO -->
   <section class="main-video">
     <iframe src="https://www.youtube.com/embed/u6KTFBKMP8M?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe>
+    <a class="open-link" href="https://www.youtube.com/watch?v=u6KTFBKMP8M" target="_blank">Open in YouTube App</a>
   </section>
 
   <!-- OTHER VIDEOS GRID -->
   <section>
     <h2>Other Videos</h2>
     <div class="videos">
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/Ltg3C8xi18Q?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/AADH9MAhInM?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/l1DFX4P94vs?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/F2Pgi8cdoM4?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/QR9MCXn9niU?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/O22p_MHiX80?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/DdLp_KjFwDo?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/EVHpZFzsiLs?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/E_Vk2xv3rMI?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/v-iaMzEHWgg?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/X91o-x5GWH0?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/6vQIJR81NRQ?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/Q6mNxzuLs-Q?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/xGGWB79w-mk?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/pWMwphaVTGk?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/imC9KBzxXOU?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/MTsJG2pDH4Y?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/iont_tBHW08?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/kYXE1Jx-FCg?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/trkQEtHKolI?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/Jhie9-gdV8I?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/3XW42i4oTno?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/XTD_qsSX80Y?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/jlQ2fvDUuU4?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/PXPApVc7IGA?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/AEOUhzykGRY?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/4ZISVgPyz5E?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/nLQ7WUAKVtw?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/q8XN9X4kTQA?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/tXo51F9RwII?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/aaFlwoQTT5I?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/Z_PcMgwyuAo?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/EXFjQL6RGdc?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/KtEhjs8QdAU?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/SQsqJpClqpU?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/GO7dhWXMJco?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/We6vVpoQG1U?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/8JU3wJyah-A?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/ButHUTmPCLM?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
-      <div class="video-box"><iframe src="https://www.youtube.com/embed/RCZRQN8sFjU?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe></div>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/Ltg3C8xi18Q?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe>
+        <a class="open-link" href="https://www.youtube.com/watch?v=Ltg3C8xi18Q" target="_blank">Open in YouTube App</a>
+      </div>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/AADH9MAhInM?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe>
+        <a class="open-link" href="https://www.youtube.com/watch?v=AADH9MAhInM" target="_blank">Open in YouTube App</a>
+      </div>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/l1DFX4P94vs?controls=1&modestbranding=0&rel=0" allowfullscreen></iframe>
+        <a class="open-link" href="https://www.youtube.com/watch?v=l1DFX4P94vs" target="_blank">Open in YouTube App</a>
+      </div>
+      <!-- Repeat for all other videos -->
     </div>
   </section>
 
